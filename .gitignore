@@ -2,3 +2,6 @@
 *.css.map
 *.sass.map
 *.scss.map
+dart-sass
+fontawesome-free-6.1.1-web
+.DS_Store

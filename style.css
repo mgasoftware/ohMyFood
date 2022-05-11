@@ -344,6 +344,15 @@ h1 {
   font-size: 1.5em;
 }
 
+h2 {
+  font-size: 1.2em;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -353,7 +362,7 @@ h1 {
   display: flex;
   justify-content: center;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   box-shadow: 0px 1px 5px rgb(145, 134, 134);
   margin-bottom: 3px;
 }
@@ -389,12 +398,103 @@ h1 {
   text-align: center;
 }
 .home__btn {
-  background-color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
   color: white;
+  margin-top: 10px;
+  margin-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 25px;
-  box-shadow: 0px 1px 5px black;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+}
+
+.text {
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.function {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+.function a:hover .function__btn {
+  background-color: rgba(146, 86, 220, 0.2941176471);
+}
+.function a:hover .function__btn i {
+  color: #9356DC;
+}
+.function__number {
+  position: absolute;
+  color: white;
+  font: 400 14px Roboto;
+  background-color: #9356DC;
+  border-radius: 15px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 16px;
+}
+.function__btn {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.062);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+  border-radius: 15px;
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.function__btn i {
+  position: absolute;
+  color: grey;
+  font-size: 1.2em;
+  margin-right: 240px;
+  margin-top: 14px;
+}
+.function__btn--text {
+  color: black;
+}
+
+.resto {
+  background-color: rgba(128, 128, 128, 0.116);
+}
+.resto__card {
+  width: 335px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+.resto__card--picture {
+  width: 335px;
+  height: 178px;
+}
+.resto__card--picture img {
+  width: 335px;
+  height: 178px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+.resto__card--body {
+  display: flex;
+}
+.resto__card--body--text {
+  padding-left: 10px;
+}
+.resto__card--body--text p {
+  font-weight: 300;
+  margin-top: -13px;
+}
+.resto__card--body i {
+  position: absolute;
+  font-size: 1.5em;
+  margin-left: 290px;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

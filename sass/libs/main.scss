@@ -1,0 +1,119 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    background-color: rgba(128, 128, 128, 0.062);
+    h1{
+        width: 70%;
+        text-align: center;
+    }
+    &__p{
+        width: 90%;
+        margin-top: 0;
+        font: 300 16px Roboto;
+        text-align: center;
+    }
+    &__btn{
+        background: linear-gradient($secondary, $primary);
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 25px;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+    }
+}
+
+.text{
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.function{
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    a:hover{
+        .function__btn{
+            background-color: #9256dc4b;
+        }
+        .function__btn i{
+            color: $primary
+        }
+    }
+    &__number{
+        position: absolute;
+        color: white;
+        font: 400 14px Roboto;
+        background-color: $primary;
+        border-radius: 15px;
+        padding-left: 9px;
+        padding-right: 9px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 16px;
+
+    }
+    &__btn{
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(128, 128, 128, 0.062);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+        border-radius: 15px;
+        margin-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        i{
+            position: absolute;
+            color: grey;
+            font-size: 1.2em;
+            margin-right: 240px;
+            margin-top: 14px;
+        }
+        &--text{
+            color: black;
+        }
+    }
+}
+
+.resto{
+    background-color: rgba(128, 128, 128, 0.116);
+    &__card{
+        width: 335px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 15px;
+        margin-left: 20px;
+        &--picture{
+            width: 335px;
+            height: 178px;
+            img{
+                width: 335px;
+                height: 178px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                object-fit: cover;
+            }
+        }
+        &--body{
+            display: flex;
+            &--text{
+                padding-left: 10px;
+                p{
+                    font-weight: 300;
+                    margin-top: -13px;
+                }
+            }
+            i{
+                position: absolute;
+                font-size: 1.5em;
+                margin-left: 290px;
+                margin-top: 20px;
+            }
+        }
+    }
+}

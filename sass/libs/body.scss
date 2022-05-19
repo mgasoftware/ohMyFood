@@ -8,21 +8,19 @@
         width: 70%;
         text-align: center;
     }
-    &__p{
+    p{
         width: 90%;
         margin-top: 0;
         font: 300 16px Roboto;
         text-align: center;
     }
     &__btn{
-        background: linear-gradient($secondary, $primary);
-        color: white;
-        margin-top: 10px;
-        margin-bottom: 50px;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 25px;
-        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+        @include btn_default;
+        p{
+            width: 100%;
+            margin-top: 15px;
+            font: 400 16px Roboto;
+        }
     }
 }
 
@@ -37,7 +35,7 @@
     margin-bottom: 25px;
     a:hover{
         .function__btn{
-            background-color: #9256dc4b;
+            background-color: #f5edff;
         }
         .function__btn i{
             color: $primary
@@ -81,16 +79,25 @@
 
 .resto{
     background-color: rgba(128, 128, 128, 0.116);
+    padding-bottom: 40px;
+    h1{
+        padding-top: 60px;
+        margin-left: 20px;
+    }
     &__card{
         width: 335px;
         height: 250px;
         display: flex;
         flex-direction: column;
+        background-color: white;
         border-radius: 15px;
+        box-shadow: 1px 1px 5px grey;
         margin-left: 20px;
+        margin-bottom: 20px;
         &--picture{
             width: 335px;
             height: 178px;
+            position: relative;
             img{
                 width: 335px;
                 height: 178px;
@@ -98,9 +105,28 @@
                 border-top-right-radius: 15px;
                 object-fit: cover;
             }
+            p{
+                background: $tertiary;
+                z-index: 1;
+                position: absolute;
+                text-align: center;
+                font: 500 14px Roboto;
+                top: 0px;
+                left: 240px;
+                color: #008766;
+                width: 80px;
+                height: 20px;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                border-bottom-left-radius: 2px;
+                border-bottom-right-radius: 2px;
+                padding-top: 5px;
+            }
         }
         &--body{
             display: flex;
+            border-bottom-left-radius: 15px ;
+            border-bottom-right-radius: 15px;
             &--text{
                 padding-left: 10px;
                 p{
@@ -113,6 +139,10 @@
                 font-size: 1.5em;
                 margin-left: 290px;
                 margin-top: 20px;
+            }
+            i:hover{
+                font-weight: bold;
+                color: $primary;
             }
         }
     }

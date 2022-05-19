@@ -1,0 +1,26 @@
+.menu_header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__logo {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 15px;
+      margin-bottom: 3px;
+      img {
+        width: 160px;
+      }
+      a i{
+          position: absolute;
+          font-size: 1.3em;
+          left: 20px;
+      }
+    }
+    &__image {
+        img{
+            width: 375px;
+            height: 235px;
+        }
+    }
+}

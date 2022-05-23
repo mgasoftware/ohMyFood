@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
     &__logo {
       display: flex;
       justify-content: center;
@@ -18,9 +19,43 @@
       }
     }
     &__image {
-        img{
-            width: 375px;
-            height: 235px;
+      position: relative;
+        img{ 
+          max-width: 100%;
+          height: auto;
         }
     }
+    &__text{
+      width: 100%;
+      position: absolute;
+      background-color: #f6f6f6;
+      top: 280px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      font-size: 1.1em;
+      font-family: Shrikhand;
+      h1{
+        padding-top: 10px;
+        padding-left: 20px;
+      }
+      i{
+        padding-left: 50px;
+      }
+    }
+}
+.menu{
+  padding-left: 20px;
+  background-color: #f6f6f6;
+  h2{
+    padding-top: 10px;
+    font-size: 1.0em;
+    font-weight: 300;
+    span{
+      border-bottom: solid;
+      border-bottom-color: $tertiary;
+    }
+  }
+  &__list{
+    
+  }
 }

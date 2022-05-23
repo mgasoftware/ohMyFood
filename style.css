@@ -575,6 +575,7 @@ footer ul li a i {
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 .menu_header__logo {
   display: flex;
@@ -591,9 +592,43 @@ footer ul li a i {
   font-size: 1.3em;
   left: 20px;
 }
+.menu_header__image {
+  position: relative;
+}
 .menu_header__image img {
-  width: 375px;
-  height: 235px;
+  max-width: 100%;
+  height: auto;
+}
+.menu_header__text {
+  width: 100%;
+  position: absolute;
+  background-color: #f6f6f6;
+  top: 280px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-size: 1.1em;
+  font-family: Shrikhand;
+}
+.menu_header__text h1 {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.menu_header__text i {
+  padding-left: 50px;
+}
+
+.menu {
+  padding-left: 20px;
+  background-color: #f6f6f6;
+}
+.menu h2 {
+  padding-top: 10px;
+  font-size: 1em;
+  font-weight: 300;
+}
+.menu h2 span {
+  border-bottom: solid;
+  border-bottom-color: #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */

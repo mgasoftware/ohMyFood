@@ -618,7 +618,11 @@ footer ul li a i {
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 20px;
+  padding-right: 20px;
   background-color: #f6f6f6;
 }
 .menu h2 {
@@ -629,6 +633,61 @@ footer ul li a i {
 .menu h2 span {
   border-bottom: solid;
   border-bottom-color: #99E2D0;
+}
+.menu__detail--list {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+}
+.menu__detail--list:nth-child(1) {
+  transition: all 2.6s 0.1s ease-in;
+}
+.menu__detail--list:nth-child(2) {
+  transition: all 2.6s 0.2s ease-in;
+}
+.menu__detail--list:nth-child(3) {
+  transition: all 2.6s 0.3s ease-in;
+}
+.menu__detail--list:nth-child(4) {
+  transition: all 2.6s 0.4s ease-in;
+}
+.menu__detail--list h3 {
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+.menu__detail--list p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+.menu__detail--list p span {
+  padding-right: 20px;
+  font-weight: bold;
+}
+.menu__btn {
+  cursor: pointer;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */

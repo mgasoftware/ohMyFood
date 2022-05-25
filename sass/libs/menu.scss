@@ -44,7 +44,11 @@
     }
 }
 .menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 20px;
+  padding-right: 20px;
   background-color: #f6f6f6;
   h2{
     padding-top: 10px;
@@ -55,7 +59,42 @@
       border-bottom-color: $tertiary;
     }
   }
-  &__list{
-    
+  &__detail{
+    &--list{
+      @include transition;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+      h3{
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 10px;
+        font-weight: 500;
+        font-size: 1.1em;
+      }
+      p{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        font-size: 0.9em;
+        font-weight: 300;
+        span{
+          padding-right: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__btn{
+    @include btn_default;
+    margin-left: 80px;
+    margin-right: 80px;
   }
 }

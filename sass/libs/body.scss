@@ -1,22 +1,22 @@
-.home{
+.home {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
     background-color: rgba(128, 128, 128, 0.062);
-    h1{
+    h1 {
         width: 70%;
         text-align: center;
     }
-    p{
+    p {
         width: 90%;
         margin-top: 0;
         font: 300 16px Roboto;
         text-align: center;
     }
-    &__btn{
+    &__btn {
         @include btn_default;
-        p{
+        p {
             width: 100%;
             margin-top: 15px;
             font: 400 16px Roboto;
@@ -24,24 +24,24 @@
     }
 }
 
-.text{
+.text {
     margin-left: 20px;
     margin-bottom: 40px;
 }
 
-.function{
+.function {
     display: flex;
     margin-left: 20px;
     margin-bottom: 25px;
-    a:hover{
-        .function__btn{
+    a:hover {
+        .function__btn {
             background-color: #f5edff;
         }
-        .function__btn i{
-            color: $primary
+        .function__btn i {
+            color: $primary;
         }
     }
-    &__number{
+    &__number {
         position: absolute;
         color: white;
         font: 400 14px Roboto;
@@ -52,9 +52,8 @@
         padding-top: 5px;
         padding-bottom: 5px;
         margin-top: 16px;
-
     }
-    &__btn{
+    &__btn {
         width: 320px;
         display: flex;
         justify-content: center;
@@ -64,27 +63,27 @@
         margin-left: 10px;
         padding-top: 5px;
         padding-bottom: 5px;
-        i{
+        i {
             position: absolute;
             color: grey;
             font-size: 1.2em;
             margin-right: 240px;
             margin-top: 14px;
         }
-        &--text{
+        &--text {
             color: black;
         }
     }
 }
 
-.resto{
+.resto {
     background-color: rgba(128, 128, 128, 0.116);
     padding-bottom: 40px;
-    h1{
+    h1 {
         padding-top: 60px;
         margin-left: 20px;
     }
-    &__card{
+    &__card {
         width: 335px;
         height: 250px;
         display: flex;
@@ -94,18 +93,18 @@
         box-shadow: 1px 1px 5px grey;
         margin-left: 20px;
         margin-bottom: 20px;
-        &--picture{
+        &--picture {
             width: 335px;
             height: 178px;
             position: relative;
-            img{
+            img {
                 width: 335px;
                 height: 178px;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
                 object-fit: cover;
             }
-            p{
+            p {
                 background: $tertiary;
                 z-index: 1;
                 position: absolute;
@@ -123,26 +122,30 @@
                 padding-top: 5px;
             }
         }
-        &--body{
+        &--body {
             display: flex;
-            border-bottom-left-radius: 15px ;
+            border-bottom-left-radius: 15px;
             border-bottom-right-radius: 15px;
-            &--text{
+            &--text {
                 padding-left: 10px;
-                p{
+                p {
                     font-weight: 300;
                     margin-top: -13px;
                 }
             }
-            i{
+            i {
                 position: absolute;
                 font-size: 1.5em;
                 margin-left: 290px;
                 margin-top: 20px;
             }
-            i:hover{
+            i:hover {
                 font-weight: bold;
                 color: $primary;
+                display: block;
+                background: -webkit-linear-gradient($primary, $secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }

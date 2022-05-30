@@ -1,32 +1,32 @@
 // VARIABLE
 
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
 
 // Style par default
 
-#container{
+#container {
     font-family: Roboto;
 }
-h1{
+h1 {
     font-size: 1.5em;
 }
-h2{
+h2 {
     font-size: 1.2em;
 }
-a{
+a {
     color: black;
     outline: none;
     text-decoration: none;
 }
-ul{
+ul {
     padding: 0px;
 }
-li{
-  list-style: none;
+li {
+    list-style: none;
 }
-button{
+button {
     border: none;
 }
 
@@ -43,10 +43,39 @@ button{
     border-radius: 25px;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
 }
-@mixin transition {
-    @for $i from 1 through 4 {
-      &:nth-child(#{$i}) {
-        transition: all 2.6s #{$i * .1}s ease-in;
-      }
+// @mixin transition {
+//     @for $i from 1 through 4 {
+//         &:nth-child(#{$i}) {
+//             transition: all 1s #{$i * 0.1}s ease-in;
+//         }
+//     }
+// }
+@mixin fade {
+    animation: fadein 2.6s;
+}
+
+@mixin slide {
+    animation: slidein 2.6s;
+}
+
+@keyframes fadein {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
     }
 }

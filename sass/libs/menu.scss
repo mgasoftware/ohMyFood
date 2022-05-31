@@ -60,21 +60,6 @@
     }
   }
   &__detail {
-    .box{
-      display: none;
-    }
-    :hover {
-      .box {
-        @include slide;
-        display: flex;
-        position: absolute;
-        left: 375px;
-        top: 460px;
-        background-color:#CF4B32;
-        width: 100px;
-        height: 60px;
-      }
-    }
     &--list {
       @include fade;
       margin-bottom: 15px;
@@ -84,6 +69,19 @@
       background-color: white;
       border-radius: 15px;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+      .box{
+        display: none;
+        width: 100px;
+        background-color:#CF4B32;
+      }
+      :hover {
+        .box {
+          @include slide;
+          display: flex;
+          visibility: visible;
+          width: 100px;
+        }
+      }
       h3 {
         @include fade;
         margin: 0;
@@ -103,9 +101,11 @@
           padding-bottom: 10px;
           font-size: 0.9em;
           font-weight: 300;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
         }
         .price p {
-          padding-right: 20px;
           font-weight: bold;
         }
       }

@@ -658,19 +658,6 @@ footer ul li a i {
   border-bottom: solid;
   border-bottom-color: #99e2d0;
 }
-.menu__detail .box {
-  display: none;
-}
-.menu__detail :hover .box {
-  animation: slidein 2.6s;
-  display: flex;
-  position: absolute;
-  left: 375px;
-  top: 460px;
-  background-color: #CF4B32;
-  width: 100px;
-  height: 60px;
-}
 .menu__detail--list {
   animation: fadein 2.6s;
   margin-bottom: 15px;
@@ -680,6 +667,17 @@ footer ul li a i {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
+}
+.menu__detail--list .box {
+  display: none;
+  width: 100px;
+  background-color: #CF4B32;
+}
+.menu__detail--list :hover .box {
+  animation: slidein 2.6s;
+  display: flex;
+  visibility: visible;
+  width: 100px;
 }
 .menu__detail--list h3 {
   animation: fadein 2.6s;
@@ -701,9 +699,11 @@ footer ul li a i {
   padding-bottom: 10px;
   font-size: 0.9em;
   font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu__detail--list--body .price p {
-  padding-right: 20px;
   font-weight: bold;
 }
 .menu__btn {

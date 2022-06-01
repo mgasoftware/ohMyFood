@@ -376,16 +376,6 @@ button {
     opacity: 1;
   }
 }
-@keyframes slidein {
-  from {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
 .header {
   width: 100%;
   display: flex;
@@ -649,12 +639,13 @@ footer ul li a i {
   padding-right: 20px;
   background-color: #f6f6f6;
 }
-.menu h2 {
-  padding-top: 10px;
+.menu__detail h2 {
+  padding-top: 20px;
+  padding-bottom: 5px;
   font-size: 1em;
   font-weight: 300;
 }
-.menu h2 span {
+.menu__detail h2 span {
   border-bottom: solid;
   border-bottom-color: #99e2d0;
 }
@@ -662,36 +653,53 @@ footer ul li a i {
   animation: fadein 2.6s;
   margin-bottom: 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
 }
 .menu__detail--list .box {
-  display: none;
-  width: 100px;
-  background-color: #CF4B32;
+  transition: all 1s;
+  background: #99e2d0;
+  width: 0px;
+  height: 61.7px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
-.menu__detail--list :hover .box {
-  animation: slidein 2.6s;
+.menu__detail--list .box .fa-circle-check {
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  color: #99e2d0;
+  background: white;
+  border-radius: 50%;
+  font-size: x-large;
+  opacity: 0;
+  transition: all 1s;
+}
+.menu__detail--list--zone {
   display: flex;
-  visibility: visible;
-  width: 100px;
+  flex-direction: column;
+  width: 100%;
+  transition: width 1s;
 }
-.menu__detail--list h3 {
+.menu__detail--list--zone h3 {
   animation: fadein 2.6s;
   margin: 0;
   padding-top: 10px;
   padding-left: 10px;
   font-weight: 500;
   font-size: 1.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.menu__detail--list--body {
+.menu__detail--list--zone--body {
   display: flex;
   justify-content: space-between;
 }
-.menu__detail--list--body p {
+.menu__detail--list--zone--body p {
   animation: fadein 2.6s;
   margin: 0;
   padding-left: 10px;
@@ -703,8 +711,9 @@ footer ul li a i {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu__detail--list--body .price p {
+.menu__detail--list--zone--body .price p {
   font-weight: bold;
+  padding-right: 10px;
 }
 .menu__btn {
   cursor: pointer;
@@ -718,6 +727,19 @@ footer ul li a i {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
   margin-left: 80px;
   margin-right: 80px;
+  margin-top: 30px;
+}
+
+.menu__detail--list:hover .box {
+  transform: translateX(0px);
+  width: 70px;
+}
+.menu__detail--list:hover .menu__detail--list--zone {
+  width: 77%;
+}
+.menu__detail--list:hover .fa-circle-check {
+  opacity: 1;
+  transform: rotateZ(360deg);
 }
 
 /*# sourceMappingURL=style.css.map */

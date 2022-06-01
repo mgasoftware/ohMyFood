@@ -50,63 +50,80 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: #f6f6f6;
-  h2 {
-    padding-top: 10px;
-    font-size: 1em;
-    font-weight: 300;
-    span {
-      border-bottom: solid;
-      border-bottom-color: $tertiary;
-    }
-  }
   &__detail {
+    h2 {
+      padding-top: 20px;
+      padding-bottom: 5px;
+      font-size: 1em;
+      font-weight: 300;
+      span {
+        border-bottom: solid;
+        border-bottom-color: $tertiary;
+      }
+    }
     &--list {
       @include fade;
       margin-bottom: 15px;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       cursor: pointer;
       background-color: white;
       border-radius: 15px;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
-      .box{
-        display: none;
-        width: 100px;
-        background-color:#CF4B32;
-      }
-      :hover {
-        .box {
-          @include slide;
-          display: flex;
-          visibility: visible;
-          width: 100px;
+      .box {
+        transition: all 1s;
+        background: $tertiary;
+        width: 0px;
+        height: 61.7px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        .fa-circle-check {
+          position: absolute;
+          left: 18px;
+          top: 20px;
+          color: $tertiary;
+          background: white;
+          border-radius: 50%;
+          font-size: x-large;
+          opacity: 0;
+          transition: all 1s;
         }
       }
-      h3 {
-        @include fade;
-        margin: 0;
-        padding-top: 10px;
-        padding-left: 10px;
-        font-weight: 500;
-        font-size: 1.1em;
-      }
-      &--body {
+      &--zone {
         display: flex;
-        justify-content: space-between;
-        p {
+        flex-direction: column;
+        width: 100%;
+        transition: width 1s;
+        h3 {
           @include fade;
           margin: 0;
+          padding-top: 10px;
           padding-left: 10px;
-          padding-top: 5px;
-          padding-bottom: 10px;
-          font-size: 0.9em;
-          font-weight: 300;
+          font-weight: 500;
+          font-size: 1.1em;
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
         }
-        .price p {
-          font-weight: bold;
+        &--body {
+          display: flex;
+          justify-content: space-between;
+          p {
+            @include fade;
+            margin: 0;
+            padding-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            font-size: 0.9em;
+            font-weight: 300;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          .price p {
+            font-weight: bold;
+            padding-right: 10px;
+          }
         }
       }
     }
@@ -115,5 +132,21 @@
     @include btn_default;
     margin-left: 80px;
     margin-right: 80px;
+    margin-top: 30px;
+  }
+}
+
+.menu__detail--list:hover {
+
+  .box {
+    transform: translateX(0px);
+    width: 70px;
+  }
+  .menu__detail--list--zone{
+    width: 77%;
+  }
+  .fa-circle-check {
+    opacity: 1;
+    transform: rotateZ(360deg);
   }
 }

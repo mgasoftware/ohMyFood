@@ -25,6 +25,13 @@
       height: auto;
     }
   }
+  &__image2 {
+    position: relative;
+    img {
+      width: 100%;
+      height: 250px;
+    }
+  }
   &__text {
     width: 100%;
     position: absolute;
@@ -71,7 +78,8 @@
       border-radius: 15px;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
       .box {
-        transition: all 1s;
+        position: relative;
+        transition: transform 1s, width 1s;
         background: $tertiary;
         width: 0px;
         height: 61.7px;
@@ -86,7 +94,7 @@
           border-radius: 50%;
           font-size: x-large;
           opacity: 0;
-          transition: all 1s;
+          transition: opacity 1s;
         }
       }
       &--zone {
@@ -137,7 +145,6 @@
 }
 
 .menu__detail--list:hover {
-
   .box {
     transform: translateX(0px);
     width: 70px;
@@ -148,5 +155,6 @@
   .fa-circle-check {
     opacity: 1;
     transform: rotateZ(360deg);
+    transition: transform 1s;
   }
 }

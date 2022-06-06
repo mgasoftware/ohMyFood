@@ -340,10 +340,6 @@ template {
   font-family: Roboto;
 }
 
-main {
-  max-width: 1920px;
-}
-
 h1 {
   font-size: 1.5em;
 }
@@ -427,6 +423,10 @@ button {
   margin-top: 0;
   font: 300 16px Roboto;
   text-align: center;
+}
+.home a :hover {
+  background: linear-gradient(#ff88de, #9b63df);
+  box-shadow: 3px 3px 7px black;
 }
 .home__btn {
   cursor: pointer;
@@ -561,8 +561,11 @@ button {
   font-size: 1.5em;
   margin-left: 290px;
   margin-top: 20px;
+  opacity: 0.5;
+  transition: opacity 2.6s;
 }
 .resto__card--body i:hover {
+  opacity: 1;
   font-weight: bold;
   color: #9356dc;
   display: block;
@@ -775,7 +778,13 @@ footer ul li a i {
   font-weight: bold;
   padding-right: 10px;
 }
-.menu__btn {
+
+.btn {
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+.btn__order {
   cursor: pointer;
   background: linear-gradient(#ff79da, #9356dc);
   color: white;
@@ -803,48 +812,6 @@ footer ul li a i {
   transition: transform 1s;
 }
 
-.loader {
-  position: absolute;
-  background: white;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacitty 1s ease-in-out;
-}
-.loader__dot1 {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #9356dc;
-  margin: 0 15px;
-  animation: launchLoader infinite 0.3s alternate;
-}
-.loader__dot2 {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #ff79da;
-  margin: 0 15px;
-  animation: launchLoader infinite 0.3s alternate;
-  animation-delay: 0.05s;
-}
-.loader__dot3 {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #99e2d0;
-  margin: 0 15px;
-  animation: launchLoader infinite 0.3s alternate;
-  animation-delay: 0.1s;
-}
-
-@keyframes launchLoader {
-  0% {
-    transform: translateY(-30px);
-  }
-}
 @media (max-width: 374px) {
   .function .function__btn {
     width: 280px;
@@ -870,11 +837,15 @@ footer ul li a i {
   }
 
   .menu_header__text {
-    top: 220px;
-    padding-bottom: 20px;
+    top: 250px;
+    padding-bottom: 30px;
   }
   .menu_header__text i {
     padding-left: 10px;
+  }
+
+  .menu__detail h2 {
+    padding-top: 30px;
   }
 }
 @media (min-width: 376px) and (max-width: 1023px) {
@@ -906,12 +877,16 @@ footer ul li a i {
   }
 
   .menu_header__text {
-    top: 300px;
-    padding-bottom: 40px;
+    top: 290px;
+    padding-bottom: 18px;
     text-align: center;
   }
   .menu_header__text i {
     padding-left: 10px;
+  }
+
+  .menu h2 {
+    padding-top: 20px;
   }
 
   footer ul {
@@ -931,6 +906,10 @@ footer ul li a i {
     height: 500px;
   }
 
+  .menu h2 {
+    text-align: center;
+  }
+
   .menu__detail--list:hover .menu__detail--list--zone {
     width: 90%;
   }
@@ -941,12 +920,23 @@ footer ul li a i {
     text-align: center;
   }
 
+  .function_ctl {
+    display: flex;
+    justify-content: space-around;
+  }
+
   .function {
     margin-left: 0px;
     justify-content: center;
   }
   .function__number {
-    left: 33%;
+    display: none;
+  }
+
+  .resto-ctl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   .resto h1 {
@@ -982,6 +972,11 @@ footer ul li a i {
     position: relative;
     text-align: center;
     top: 50px;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .menu__detail--list:hover .menu__detail--list--zone {

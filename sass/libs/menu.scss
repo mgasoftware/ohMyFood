@@ -136,7 +136,12 @@
       }
     }
   }
-  &__btn {
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+  &__order {
     @include btn_default;
     margin-left: 80px;
     margin-right: 80px;

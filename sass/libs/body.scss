@@ -14,6 +14,12 @@
         font: 300 16px Roboto;
         text-align: center;
     }
+    a{
+        :hover{
+            background: linear-gradient(lighten($secondary, 3%), lighten($primary, 3%));
+            box-shadow: 3px 3px 7px darken(black, 15%);
+        }
+    }
     &__btn {
         @include btn_default;
         p {
@@ -139,8 +145,11 @@
                 font-size: 1.5em;
                 margin-left: 290px;
                 margin-top: 20px;
+                opacity: 0.5;
+                transition: opacity 2.6s;
             }
             i:hover {
+                opacity: 1;
                 font-weight: bold;
                 color: $primary;
                 display: block;
@@ -171,10 +180,6 @@
         75% {
             opacity: 1;
         }
-
-        // 99% {
-        //     opacity: 0;
-        // }
 
         100% {
             opacity: 0;

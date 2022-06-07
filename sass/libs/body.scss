@@ -14,19 +14,17 @@
         font: 300 16px Roboto;
         text-align: center;
     }
-    a{
-        :hover{
+    a {
+        :hover {
             background: linear-gradient(lighten($secondary, 3%), lighten($primary, 3%));
             box-shadow: 3px 3px 7px darken(black, 15%);
         }
     }
     &__btn {
         @include btn_default;
-        p {
-            width: 100%;
-            margin-top: 15px;
-            font: 400 16px Roboto;
-        }
+        margin-top: 15px;
+        padding: 15px;
+
     }
 }
 
@@ -34,7 +32,6 @@
     margin-left: 20px;
     margin-bottom: 40px;
 }
-
 .function {
     display: flex;
     margin-left: 20px;
@@ -172,7 +169,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     animation: loader 3s ease-out 1 forwards;
     -moz-animation: loader 3s ease-out 1 forwards;
 

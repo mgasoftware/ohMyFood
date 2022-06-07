@@ -78,7 +78,12 @@
         }
     }
     footer{
+        h3{
+            padding-left: 0;
+            text-align: center;
+        }
         ul{
+            padding-left: 0;
             text-align: center;
         }
     }
@@ -111,6 +116,10 @@
         text-align: center;
     }
     .function_ctl{
+        display: flex;
+        flex-direction: column;
+    }
+    .function__group{
         display: flex;
         justify-content: space-around;
     }
@@ -173,7 +182,12 @@
         }
     }
     footer{
+        h3{
+            padding-left: 0px;
+            text-align: center;
+        }
         ul{
+            padding-left: 0px;
             text-align: center;
         }
     }

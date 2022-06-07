@@ -45,14 +45,14 @@ button {
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.363);
 }
 @mixin fade {
-    animation: fadein 2.6s;
+    animation: fadein 1.6s;
 }
 
 // KEYFRAMES
 
 @keyframes fadein {
     from {
-        transform: translateY(50px);
+        transform: translateY(30px);
         opacity: 0;
     }
     to {

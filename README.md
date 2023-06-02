@@ -8,6 +8,6 @@ The mobile and desktop mock-ups of the site has been made by OpenClassRoom. The 
 
 The website is be developed for mobile, tablet, and desktop devices, strictly following the information determined in the mock-ups. It's responsive and "mobile first," with polished animations.
 
-##Demo
+## Demo
 
 https://mgasoftware.github.io/
